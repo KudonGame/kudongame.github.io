@@ -15,6 +15,34 @@
      // Can reload page here 
 }, '5.87'); 
 </script>
+    <script type="text/javascript">
+
+var parts=document.location.search.substr(1).split("&");
+    var flashVars={}, curr;
+    for (i=0; i<parts.length; i++) {
+        curr = parts[i].split('=');
+        flashVars[curr[0]] = curr[1];
+    }
+
+    var viewer_id = flashVars['viewer_id'];
+    var auth_key = flashVars['auth_key'];
+
+//alert(viewer_id);
+
+var user_name;
+
+VK.api("users.get",{uids:viewer_id} ,function (data)
+{
+  user_name = data.response[0].first_name;
+   //alert(user_name);
+     SendMessage("vkAPI", "sendfirst", user_name);
+    
+  });
+
+SendMessage("vkAPI", "sendid", viewer_id);
+
+}
+</script>
            <div id="vk_ads_109397"></div>
 <script type="text/javascript">
   setTimeout(function() {
