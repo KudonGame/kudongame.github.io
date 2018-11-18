@@ -5,40 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Archers Wind</title>
     <script src="Build/UnityLoader.js"></script>
-    <script src="https://vk.com/js/api/xd_connection.js?2" type="text/javascript"></script>
-    <script type="text/javascript">
-
-var parts=document.location.search.substr(1).split("&");
-    var flashVars={}, curr;
-    for (i=0; i<parts.length; i++) {
-        curr = parts[i].split('=');
-        flashVars[curr[0]] = curr[1];
-    }
-
-    var viewer_id = flashVars['viewer_id'];
-    var auth_key = flashVars['auth_key'];
-
-//alert(viewer_id);
-
-var user_name;
-
-VK.api("users.get",{uids:viewer_id} ,function (data)
-{
-  user_name = data.response[0].first_name;
-   //alert(user_name);
-     SendMessage("vkAPI", "sendfirst", user_name);
-    
-  });
-
-SendMessage("vkAPI", "sendid", viewer_id);
-
-}
-</script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Wind Archers WebGL.json");
     </script>
   </head>
   <body>
-    <div id="gameContainer" style="width: 960px; height: 600px; margin: auto"></div>
+    <div id="gameContainer" style="width: 960px; height: 500px; margin: auto"></div>
   </body>
 </html>
