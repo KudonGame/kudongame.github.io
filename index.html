@@ -69,7 +69,7 @@
 
 	function GetProfile(uid){
 
-	    VK.api('users.get', (user_ids: uid,fields: 'first_name, photo, last_name'), function(data){ 
+	    VK.api('users.get', {user_ids: uid,fields: 'first_name, photo, last_name'}, function(data){ 
 
         var Fname ="";
 
@@ -95,41 +95,24 @@
 
         }			
 
-		)};
+		});
 
 		}
 
 		function PostToWall(text) {
 
-		
-
 		var photo_num = "photo487095788_456239452";
 
-		
+		VK.api('wall.post', {message: text, attachments: photo_num + ",app6755180_487095788"}, function(data) {
 
-		VK.api('wall.post', (message: text,
-
-		      attachments : photo_num + ",app6755180_487095788"
-
-			  }, function(data) {
-
-			  
-
-			  )};
-
-			  
-
-		 
+			  });
+			  }
 
 		function ShowInvite(){
 
         VK.callMethod("showInviteBox");
 
         } 		
-
-		 
-
-		 
 
     </script>
     <script>
