@@ -69,7 +69,7 @@
 
 	function GetProfile(uid){
 
-	    VK.api('users.get', {user_ids: uid,fields: 'first_name, photo, last_name'}, function(data){ 
+	    VK.api('users.get', {uids: uid,fields: 'first_name, photo, last_name'}, function(data){ 
 
         var Fname ="";
 
