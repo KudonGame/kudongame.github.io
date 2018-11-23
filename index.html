@@ -25,27 +25,27 @@
 
    
 
-	//VK.addCallback('onWindowBlur', function(settings) { window.Show(); } );
+	VK.addCallback('onWindowBlur', function(settings) { gameInstance.Hide(); } );
 
-	//VK.addCallback('onWindowFocus', function(settings) { window.Show(); } );
-
-	
+	VK.addCallback('onWindowFocus', function(settings) { gameInstance.Show(); } );
 
 	
 
 	
 
-	//function UnityShow()  {
+	
 
-	//gameInstance.style.visibility = 'visible';
+	function gameInstanceShow()  {
 
-	//}
+	gameInstance.style.visibility = 'visible';
 
-	//function UnityHide()  {
+	}
 
-    //   gameInstance.style.visibility = 'hidden';
+	function gameInstanceHide()  {
 
-  //  }
+      gameInstance.style.visibility = 'hidden';
+
+    }
 
 	   
 
